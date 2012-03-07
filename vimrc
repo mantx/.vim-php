@@ -3,6 +3,11 @@ let mapleader=","           "Changes Leader key into a comma instead of a backsl
 set nocompatible            "Prefents VIM from being nerfed into acting like VI
 set viminfo='1000,f1,:1000,/1000
 set history=500
+set mouse=a
+
+" ------ folding --------
+set foldmethod=indent
+"set foldcolumn=4     " the number of columns to use for folding display at the left
 
 au FileType php set omnifunc=phpcomplete#CompletePHP
 
@@ -16,8 +21,8 @@ set ruler                   "Displays cursor position on bottom right of screen
 set statusline=%<%f\ %h%m%r%=%{fugitive#statusline()}\ \ %-14.(%l,%c%V%)\ %P
 
 "------  Behavior  ------
-set tabstop=4               "tab = 4 spaces
-set shiftwidth=4            "Indent to four spaces
+set tabstop=2               "tab = 4 spaces
+set shiftwidth=2            "Indent to four spaces
 set hidden                  "Switch between unsaved buffers w/o needing to save, preserves history
 filetype indent on          "Syntax Highlight
 filetype plugin on          "Needed for snipMate
@@ -39,14 +44,14 @@ noremap <leader>a :Ack
 "------  NERDTree Options  ------
 let NERDTreeIgnore=['CVS']
 let NERDTreeChDirMode=2     "setting root dir in NT also sets VIM's cd
-noremap <silent> <Leader>n :NERDTreeToggle<CR>
+noremap <silent> <Leader>nt :NERDTreeToggle<CR>
 
 "------  Tagbar Options  ------
 " http://adamyoung.net/Exuberant-Ctags-OS-X
 " http://www.vim.org/scripts/script.php?script_id=273
-let g:tagbar_ctags_bin='/usr/local/bin/ctags'
+"let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 let g:tagbar_width=26
-noremap <silent> <Leader>y :TagbarToggle<CR>
+noremap <silent> <Leader>tb :TagbarToggle<CR>
 
 "------  Buffers  ------
 " Ctrl Left & Right move between buffers
