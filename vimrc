@@ -114,7 +114,10 @@ map <Leader>v "+gP
 " ,c = Copy
 map <Leader>c "+y
 " F2 = Paste Toggle (in insert mode, pasting indented text behavior changes)
+nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
+set showmode
+:set invpaste paste?
 " ,T = Delete all Trailing space in file
 map <Leader>T :%s/\s\+$//<CR>
 " ,U = Deletes Unwanted empty lines
